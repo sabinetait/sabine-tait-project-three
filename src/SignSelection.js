@@ -22,7 +22,7 @@ const SignSelection = () => {
             day: 'today',
           }
         }).then( (response) => {
-        //   console.log(response.data);
+          console.log(response.data);
           setHoroscope(response.data);
           
         });

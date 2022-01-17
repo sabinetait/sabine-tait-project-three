@@ -1,18 +1,25 @@
 // Sign Selection
 import axios from 'axios';
 import Results from './Results.js';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
  
 const SignSelection = () => {
-
+    // set user's astrological choice into start
     const [horoscope, setHoroscope] = useState([]);
     const [userChoice, setUserChoice] = useState('');
 
+    // event lister for click on user's astrological sign choice
     const handleClick = (event) => {
+        // console.log(event);
         // console.log(event.target.id);
         setUserChoice(event.target.id);
         console.log(userChoice);
+    }
 
+    // API call to fetch data based on user's choice
+    useEffect( () => {
+      // condition where API is only called with the user's choice
+      if (userChoice !== '') {
         axios({
           url: 'https://aztro.sameerkumar.website',
           method: 'POST',
@@ -24,10 +31,9 @@ const SignSelection = () => {
         }).then( (response) => {
           console.log(response.data);
           setHoroscope(response.data);
-          
         });
-
-    }
+      } 
+    }, [userChoice])
 
     return (
         <div>
@@ -48,8 +54,8 @@ const SignSelection = () => {
                 <button id="pisces" onClick={ handleClick }>Pisces</button>
             </div>
 
-
             <Results
+                current_date={horoscope.current_date}
                 description={horoscope.description}
                 compatibility={horoscope.compatibility}
                 color={horoscope.color}

@@ -1,10 +1,12 @@
+// Styling
 import './App.css';
 
-import Header from './Header.js';
-import SignSelection from './SignSelection.js';
-import Footer from './Footer.js';
+// Components
+import Header from './components/Header.js';
+import SignSelection from './components/SignSelection.js';
+import Footer from './components/Footer.js';
 
-function App() {
+const App = () => {
 
   return (
     <div className="App">
@@ -17,8 +19,6 @@ function App() {
         <Footer />
 
       </div>
-
-
       
     </div>
   );

@@ -1,22 +1,28 @@
 // Sign Selection
 import axios from 'axios';
-import Results from './Results.js';
 import { useEffect, useState } from 'react';
+
+import Results from './Results.js';
  
 const SignSelection = () => {
-    // set user's astrological choice into start
+    // set user's astrological choice into state
     const [horoscope, setHoroscope] = useState([]);
     const [userChoice, setUserChoice] = useState('');
 
-    // event lister for click on user's astrological sign choice
+    // set user's choice of date into state
+    const [date, setDate] = useState('');
+
+    // event listener for click on user's astrological sign choice
     const handleClick = (event) => {
-        // console.log(event);
-        // console.log(event.target.id);
-        setUserChoice(event.target.id);
-        console.log(userChoice);
+      setUserChoice(event.target.id);
     }
 
-    // API call to fetch data based on user's choice
+    // event listener for click on user's choice of date
+    const handleDateChange = (event) => {
+      setDate(event.target.id);
+    }
+
+    // API call to fetch data based on user's astrological choice
     useEffect( () => {
       // condition where API is only called with the user's choice
       if (userChoice !== '') {
@@ -29,11 +35,28 @@ const SignSelection = () => {
             day: 'today',
           }
         }).then( (response) => {
-          console.log(response.data);
           setHoroscope(response.data);
         });
       } 
     }, [userChoice])
+
+    // API call to fetch data based on user's astrological choice & choice of date
+    useEffect ( () => {
+      // condition where API is only called with a date
+      if (date !== '') {
+        axios({
+          url: 'https://aztro.sameerkumar.website',
+          method: 'POST',
+          dataResponse: 'json',
+          params: {
+            sign: userChoice,
+            day: date,
+          }
+        }).then( (response) => {
+          setHoroscope(response.data);
+        });
+      }
+    }, [date])
 
     return (
         <div>
@@ -52,6 +75,12 @@ const SignSelection = () => {
                 <button id="capricorn" onClick={ handleClick }>Capricorn</button>
                 <button id="aquarius" onClick={ handleClick }>Aquarius</button>
                 <button id="pisces" onClick={ handleClick }>Pisces</button>
+            </div>
+
+            <div className="date-buttons">
+              <button id="yesterday" onClick={ handleDateChange }>Yesterday</button>
+              <button id="today" onClick={ handleDateChange }>Today</button>
+              <button id="tomorrow" onClick={ handleDateChange }>Tomorrow</button>
             </div>
 
             <Results

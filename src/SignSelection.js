@@ -56,7 +56,7 @@ const SignSelection = () => {
           setHoroscope(response.data);
         });
       }
-    }, [date])
+    }, [userChoice,date])
 
     return (
         <div>

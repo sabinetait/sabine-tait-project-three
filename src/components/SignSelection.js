@@ -20,7 +20,7 @@ const SignSelection = () => {
     // event listener for click on user's astrological sign choice
     const handleClick = (event) => {
       setUserChoice(event.target.id);
-      readingRef.current.scrollIntoView({ behavior: 'smooth' })
+      readingRef.current.scrollIntoView({ behavior: 'smooth' });
     }
 
     // event listener for click on user's choice of date
@@ -75,18 +75,18 @@ const SignSelection = () => {
           <h2>Select your astrological sign for your daily horoscope</h2>
           
           <div className="astro-buttons">
-            <button id="aries" onClick={ handleClick }>♈︎ Aries</button>
-            <button id="taurus" onClick={ handleClick }>♉︎ Taurus</button>
-            <button id="gemini" onClick={ handleClick }> ♊︎ Gemini</button>
-            <button id="cancer" onClick={ handleClick }>♋︎ Cancer</button>
-            <button id="leo" onClick={ handleClick }>♌︎ Leo</button>
-            <button id="virgo" onClick={ handleClick }>♍︎ Virgo</button>
-            <button id="libra" onClick={ handleClick }>♎︎ Libra</button>
-            <button id="scorpio" onClick={ handleClick }>♏︎ Scorpio</button>
-            <button id="sagittarius" onClick={ handleClick }>♐︎ Sagittarius</button>
-            <button id="capricorn" onClick={ handleClick }>♑︎ Capricorn</button>
-            <button id="aquarius" onClick={ handleClick }>♒︎ Aquarius</button>
-            <button id="pisces" onClick={ handleClick }>♓︎ Pisces</button>
+            <button id="aries" onClick={ handleClick }>♈︎ Aries<span>Mar 21 - Apr 20</span></button>
+            <button id="taurus" onClick={ handleClick }>♉︎ Taurus<span>Apr 21 - May 20</span></button>
+            <button id="gemini" onClick={ handleClick }> ♊︎ Gemini<span>May 21 - June 21</span></button>
+            <button id="cancer" onClick={ handleClick }>♋︎ Cancer<span>Jun 22 - Jul 22</span></button>
+            <button id="leo" onClick={ handleClick }>♌︎ Leo<span>Jul 23 - Aug 22</span></button>
+            <button id="virgo" onClick={ handleClick }>♍︎ Virgo<span>Aug 23 - Sep 22</span></button>
+            <button id="libra" onClick={ handleClick }>♎︎ Libra<span>Sep 23 - Oct 22</span> </button>
+            <button id="scorpio" onClick={ handleClick }>♏︎ Scorpio<span>Oct 23 - Nov 22</span></button>
+            <button id="sagittarius" onClick={ handleClick }>♐︎ Sagittarius<span>Nov 23 - Dec 21</span></button>
+            <button id="capricorn" onClick={ handleClick }>♑︎ Capricorn<span>Dec 22 - Jan 19</span></button>
+            <button id="aquarius" onClick={ handleClick }>♒︎ Aquarius<span>Jan 20 - Feb 18</span></button>
+            <button id="pisces" onClick={ handleClick }>♓︎ Pisces<span>Feb 19 - Mar 20</span></button>
             
           </div>
         </section>

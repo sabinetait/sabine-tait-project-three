@@ -4,6 +4,7 @@ import './App.css';
 // Components
 import Header from './components/Header.js';
 import SignSelection from './components/SignSelection.js';
+import Icon from './components/Icon';
 import Footer from './components/Footer.js';
 
 const App = () => {
@@ -16,6 +17,8 @@ const App = () => {
         <Header />
 
         <SignSelection />
+
+        <Icon />
 
         <Footer />
 

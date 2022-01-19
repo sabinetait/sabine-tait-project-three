@@ -3,7 +3,7 @@
 const Results = (props) => {
     return (
         <section className="results">
-            <div className="user-horoscopeReading">
+            <div className="user-horoscope-reading">
                 <h3>{props.current_date}</h3>
                 <p>{props.description}</p>
                 <p>Compatible with: {props.compatibility}</p>

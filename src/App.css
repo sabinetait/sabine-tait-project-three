@@ -6,15 +6,25 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 
 .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
 
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Poiret+One&display=swap');
+
 html {
     font-size: 125%;
+    padding: 0;
+    margin: 0;
+    /* background-color: rgb(204, 196, 255); */
+    background-image: url(../assests/background-image.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
 }
 
 .App {
    display: flex;
    flex-wrap: wrap;
    justify-content: center;
-   padding-top: 5%;
+   padding-top: 2%;
    
 }
 
@@ -23,22 +33,125 @@ html {
     max-width: 1440px;
 }
 
-.app-container {
-
+header {
+    height: 15vh;
+    display: flex;
+    justify-content: center;
 }
+
+.sign-selection {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.horoscope-reading {
+    height: 90vh;
+}
+
 
 h1 {
     margin: 0;
+    font-size: 3.5rem;
+    font-family: 'Major Mono Display', monospace;
+}
+
+span.upper {
+    text-transform: uppercase;
+}
+
+span.lower {
+    text-transform: lowercase;
+}
+
+h2 {
+    margin-bottom: 3%;
+    font-size: 1.3rem;
+    font-family: 'Poiret One', cursive;
+}
+
+h3 {
+    font-family: 'Poiret One', cursive;
+}
+
+p {
+    font-family: 'Poiret One', cursive;
+}
+
+a {
+    font-family: 'Poiret One', cursive;
 }
 
 button {
-    height: 5.5rem;
-    width: 5.5rem;
+    text-transform: uppercase;
+    font-family: 'Poiret One', cursive;
+}
+
+div.astro-buttons button {
+    height: 7rem;
+    width: 7rem;
+    margin: 1.5%;
+    border: none;
+    border-radius: 0.3rem;
+    color: rgb(255, 248, 220);
+    background-color: rgba(144, 181, 248, 0.295);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    
 }
 
 .astro-buttons {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center
+    justify-content: center;
+    margin-bottom: 5%;
+    border-radius: 0.3rem;
+    padding: 3% 0;
+    background-color: rgba(100, 149, 237, 0.2);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    
 }
 
+
+.horoscope-reading {
+    margin-top: 15%;
+}
+.date-buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.user-horoscope-reading {
+    text-align: center;
+    padding: 5% 2% 2% 2%;
+    border-radius: 0.3rem;
+    background-color: rgba(100, 149, 237, 0.2);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    
+}
+
+.horoscope-reading h2 {
+    font-family: 'Major Mono Display', monospace;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+div.date-buttons button {
+    padding: 1%;
+    border: none;
+    border-radius: 0.3rem;
+    color: rgb(255, 248, 220);
+    background-color: rgba(144, 181, 248, 0.295);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    
+}
+
+footer {
+    text-align: center;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}

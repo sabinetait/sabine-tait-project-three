@@ -90,12 +90,12 @@ const SignSelection = () => {
 
         <section className="horoscope-reading">
           
-          <h2>Your reading</h2>
+          <h2><span className="lower">Y</span>ou<span className="upper">r</span> Readin<span className="upper">g</span></h2>
 
           <div className="date-buttons">
-            <button id="yesterday" onClick={ handleDateChange }>Yesterday</button>
-            <button id="today" onClick={ handleDateChange }>Today</button>
-            <button id="tomorrow" onClick={ handleDateChange }>Tomorrow</button>
+            <button id="yesterday" className="yesterday" onClick={ handleDateChange }>Yesterday</button>
+            <button id="today" className="today" onClick={ handleDateChange }>Today</button>
+            <button id="tomorrow" className="tomorrow" onClick={ handleDateChange }>Tomorrow</button>
           </div>
 
           <Results

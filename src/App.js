@@ -11,7 +11,8 @@ const App = () => {
   return (
     <div className="App">
 
-      <div className="wrapper app-containter">
+      <div className="wrapper">
+
         <Header />
 
         <SignSelection />
@@ -19,7 +20,7 @@ const App = () => {
         <Footer />
 
       </div>
-      
+
     </div>
   );
 }

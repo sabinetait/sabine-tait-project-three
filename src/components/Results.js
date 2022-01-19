@@ -5,12 +5,12 @@ const Results = (props) => {
         <section className="results">
             <div className="user-horoscope-reading">
                 <h3>{props.current_date}</h3>
-                <p>{props.description}</p>
-                <p>Compatible with: {props.compatibility}</p>
-                <p>Colour: {props.color}</p>
-                <p>Lucky number: {props.lucky_number}</p>
-                <p>Lucky time: {props.lucky_time}</p>
-                <p>How are you feeling? {props.mood}</p>
+                <p className="reading">{props.description}</p>
+                <p><span>Compatible with:</span> {props.compatibility}</p>
+                <p><span>Colour:</span> {props.color}</p>
+                <p><span>Lucky number:</span> {props.lucky_number}</p>
+                <p><span>Lucky time:</span> {props.lucky_time}</p>
+                <p><span>Mood?</span> {props.mood}</p>
             </div>
         </section>
     )

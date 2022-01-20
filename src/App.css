@@ -294,3 +294,33 @@ footer a:hover,
 footer a:focus {
     color: rgb(255, 248, 220);
 }
+
+/* Media queries */
+
+@media(max-width: 1365px) {
+
+    h1 {
+        font-size: 2.8rem;
+    }
+
+    .sign-selection h2 {
+        margin-top: 10%;
+    }
+}
+
+@media(max-width: 900px) {
+
+    div.astro-buttons button {
+        height: 7.5rem;
+        width: 7.5rem;
+        padding-top: 2rem;
+    }
+
+    .sign-selection h2 {
+        margin-top: 3%;
+    }
+}
+
+@media(max-width: 775px) {
+    
+}

@@ -1,4 +1,7 @@
-// Results
+// *** Result Component ***
+// Create a component to display data from the aztroAPI
+// This component will get data (horoscope) passed in as props
+// Render out horoscope and other data for each astrological sign
 
 const Results = (props) => {
     return (

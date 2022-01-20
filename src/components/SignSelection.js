@@ -1,4 +1,14 @@
-// Sign Selection
+// *** Sign Selection Component ***
+// Create state items to hold data coming from the aztroAPI -> the user astrological selection (stretch: add user birthday input to select astrological sign, add user date selection)
+// - horoscope
+// - userSign
+// The local method (signSelection) to get a data from the user's sign
+
+// signSelection method will make the call to aztroAPI with or without user input
+// - when successful, update the state (horoscope) with new data
+// - if unsuccessful, display the error message
+
+// A local method (handleClick) to handle the onClick event to update state (userSign) with user input
 
 // Modules
 import axios from 'axios';
@@ -15,6 +25,10 @@ const SignSelection = () => {
     // set user's choice of date into state
     const [date, setDate] = useState('');
 
+    // set error into state
+    const [error, setError] = useState('');
+
+    // created a reference to the section that will display horoscope reading
     const readingRef = useRef();
 
     // event listener for click on user's astrological sign choice
@@ -30,7 +44,7 @@ const SignSelection = () => {
 
     // API call to fetch data based on user's astrological choice
     useEffect( () => {
-      // condition where API is only called with the user's choice
+      // condition where API is only called with the user's choice (using method:POST as per API documentation, not sure why)
       if (userChoice !== '') {
         axios({
           url: 'https://aztro.sameerkumar.website',
@@ -42,13 +56,16 @@ const SignSelection = () => {
           }
         }).then( (response) => {
           setHoroscope(response.data);
+        })
+        .catch((error) => {
+          setError(error.message)
         });
       } 
     }, [userChoice])
 
     // API call to fetch data based on user's astrological choice & choice of date
     useEffect ( () => {
-      // condition where API is only called with a date
+      // condition where API is only called with a date change (using method:POST as per API documentation, not sure why)
       if (date !== '') {
         axios({
           url: 'https://aztro.sameerkumar.website',
@@ -60,9 +77,8 @@ const SignSelection = () => {
           }
         }).then( (response) => {
           setHoroscope(response.data);
-
         }).catch ((error) => {
-          console.log(error);
+          setError(error.message);
         })
       }
     }, [userChoice, date])
@@ -96,7 +112,9 @@ const SignSelection = () => {
 
           <div className="horoscope-reading-content">
 
-            <h2><span className="lower">Y</span>ou<span className="upper">r</span> Readin<span className="upper">g</span></h2>
+            <h2><span className="lower">Y</span>ou<span className="upper">r</span> Re<span className="upper">a</span>ding</h2>
+
+            <h3 className="error-message">{ error && <div>{ error }</div>}</h3>
 
             <div className="date-buttons">
               <button id="yesterday" className="yesterday" onClick={ handleDateChange }>Yesterday</button>
@@ -104,6 +122,7 @@ const SignSelection = () => {
               <button id="tomorrow" className="tomorrow" onClick={ handleDateChange }>Tomorrow</button>
             </div>
 
+            
             <Results
               current_date={horoscope.current_date}
               description={horoscope.description}

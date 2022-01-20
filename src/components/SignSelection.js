@@ -88,23 +88,29 @@ const SignSelection = () => {
 
         <section className="sign-selection">
           
-          <h2>Select your astrological sign for your daily horoscope</h2>
-          
-          <div className="astro-buttons">
-            <button id="aries" className="aries" onClick={ handleClick }>Aries<span>Mar 21 - Apr 20</span></button>
-            <button id="taurus" className="taurus" onClick={ handleClick }>Taurus<span>Apr 21 - May 20</span></button>
-            <button id="gemini" className="gemini" onClick={ handleClick }>Gemini<span>May 21 - June 21</span></button>
-            <button id="cancer" className="cancer" onClick={ handleClick }>Cancer<span>Jun 22 - Jul 22</span></button>
-            <button id="leo" className="leo" onClick={ handleClick }>Leo<span>Jul 23 - Aug 22</span></button>
-            <button id="virgo" className="virgo" onClick={ handleClick }>Virgo<span>Aug 23 - Sep 22</span></button>
-            <button id="libra" className="libra" onClick={ handleClick }>Libra<span>Sep 23 - Oct 22</span> </button>
-            <button id="scorpio" className="scorpio" onClick={ handleClick }>Scorpio<span>Oct 23 - Nov 22</span></button>
-            <button id="sagittarius" className="sagittarius" onClick={ handleClick }>Sagittarius<span>Nov 23 - Dec 21</span></button>
-            <button id="capricorn" className="capricorn" onClick={ handleClick }>Capricorn<span>Dec 22 - Jan 19</span></button>
-            <button id="aquarius" className="aquarius" onClick={ handleClick }>Aquarius<span>Jan 20 - Feb 18</span></button>
-            <button id="pisces" className="pisces" onClick={ handleClick }>Pisces<span>Feb 19 - Mar 20</span></button>
+          <div>
+
+            <h2>Select your astrological sign for your daily horoscope</h2>
             
+            <div className="astro-buttons">
+              
+              <button id="aries" className="aries" onClick={ handleClick }>Aries<span>Mar 21 - Apr 20</span></button>
+              <button id="taurus" className="taurus" onClick={ handleClick }>Taurus<span>Apr 21 - May 20</span></button>
+              <button id="gemini" className="gemini" onClick={ handleClick }>Gemini<span>May 21 - June 21</span></button>
+              <button id="cancer" className="cancer" onClick={ handleClick }>Cancer<span>Jun 22 - Jul 22</span></button>
+              <button id="leo" className="leo" onClick={ handleClick }>Leo<span>Jul 23 - Aug 22</span></button>
+              <button id="virgo" className="virgo" onClick={ handleClick }>Virgo<span>Aug 23 - Sep 22</span></button>
+              <button id="libra" className="libra" onClick={ handleClick }>Libra<span>Sep 23 - Oct 22</span> </button>
+              <button id="scorpio" className="scorpio" onClick={ handleClick }>Scorpio<span>Oct 23 - Nov 22</span></button>
+              <button id="sagittarius" className="sagittarius" onClick={ handleClick }>Sagittarius<span>Nov 23 - Dec 21</span></button>
+              <button id="capricorn" className="capricorn" onClick={ handleClick }>Capricorn<span>Dec 22 - Jan 19</span></button>
+              <button id="aquarius" className="aquarius" onClick={ handleClick }>Aquarius<span>Jan 20 - Feb 18</span></button>
+              <button id="pisces" className="pisces" onClick={ handleClick }>Pisces<span>Feb 19 - Mar 20</span></button>
+              
+            </div>
+
           </div>
+
         </section>
           
 

@@ -321,6 +321,47 @@ footer a:focus {
     }
 }
 
-@media(max-width: 775px) {
+@media(max-width: 770px) {
+
+    .sign-selection h2 {
+        margin-top: 25%;
+    }
     
 }
+
+@media(max-width: 563px) {
+
+    .sign-selection h2 {
+        margin-top: 90%;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+@media(max-width: 510px) {
+    .sign-selection h2 {
+        margin-top: 85%;
+        margin-bottom: 5%;
+        font-size: 1.1rem;
+    }
+
+    div.astro-buttons button {
+        height: 7rem;
+        width: 7rem;
+        font-size: 1rem;
+        padding-top: 1.7rem;
+    }
+}
+
+@media(max-width: 394px) {
+    h1 {
+        font-size: 1.85rem;
+    }
+
+    .sign-selection h2 {
+        margin-top: 95%;
+    }
+}
+

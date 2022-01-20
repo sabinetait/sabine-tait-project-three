@@ -93,6 +93,11 @@ a.arrow-up {
     font-size: 2rem;
 }
 
+a.arrow-up:hover,
+a.arrow-up:focus {
+    color: rgb(255, 248, 220);
+}
+
 /* Signs */
 
 .sign-selection {
@@ -128,6 +133,69 @@ div.astro-buttons button {
     color: rgb(255, 248, 220);
     background-color: rgba(144, 181, 248, 0.295);
     box-shadow: rgba(129, 129, 153, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+
+.aries {
+    background-image: url(../assests/aries.png);
+    background-size: 85%;
+}
+
+.taurus {
+    background-image: url(../assests/taurus.png);
+    background-size: 80%;
+}
+
+.gemini {
+    background-image: url(../assests/gemini.png);
+    background-size: 100%;
+}
+
+.cancer {
+    background-image: url(../assests/cancer.png);
+    background-size: 100%;
+}
+
+.leo {
+    background-image: url(../assests/leo.png);
+    background-size: 70%;
+}
+
+.virgo {
+    background-image: url(../assests/virgo.png);
+    background-size: 100%;
+}
+
+.libra {
+    background-image: url(../assests/libra.png);
+    background-size: 100%;
+}
+
+.scorpio {
+    background-image: url(../assests/scorpio.png);
+    background-size: 75%;
+}
+
+.sagittarius {
+    background-image: url(../assests/sagittarius.png);
+    background-size: 80%;
+}
+
+.capricorn {
+    background-image: url(../assests/capricorn.png);
+    background-size: 100%;
+}
+ 
+.aquarius {
+    background-image: url(../assests/aquarius.png);
+    background-size: 100%;
+}
+
+.pisces{
+    background-image: url(../assests/pisces.png);
+    background-size: 80%;
 }
 
 div.astro-buttons button:hover,

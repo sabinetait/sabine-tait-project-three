@@ -25,15 +25,14 @@
 // - footer
 
 
-
 // Styling
 import './App.css';
 
 // Components
 import Header from './components/Header.js';
 import SignSelection from './components/SignSelection.js';
-import Icon from './components/Icon';
 import Footer from './components/Footer.js';
+import Icon from './components/Icon.js';
 
 const App = () => {
 

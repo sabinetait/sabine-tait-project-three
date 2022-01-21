@@ -16,7 +16,7 @@ html {
     font-size: 125%;
     padding: 0;
     margin: 0;
-    /* background-color: rgb(204, 196, 255); */
+    background-color: rgb(9, 5, 39);
     background-image: url(../assests/background-image.jpg);
     background-position: center;
     background-size: cover;
@@ -72,6 +72,7 @@ h3 {
     font-family: 'Poiret One', cursive;
     font-size: 1.4rem;
     color: rgb(255, 248, 220);
+    margin-top: 0;
 }
 
 p {
@@ -87,15 +88,6 @@ a {
 button {
     text-transform: uppercase;
     font-family: 'Poiret One', cursive;
-}
-
-a.arrow-up {
-    font-size: 2rem;
-}
-
-a.arrow-up:hover,
-a.arrow-up:focus {
-    color: rgb(255, 248, 220);
 }
 
 /* Signs */
@@ -213,20 +205,19 @@ div.astro-buttons button span {
 
 .horoscope-reading {
     height: 90vh;
-    margin-top: 10%;
+    margin-top: 7%;
 }
 
-.date-buttons {
+.horoscope-reading-content {
     display: flex;
-    justify-content: center;
-    position: absolute;
-    bottom: 78%;
-    right: 39%;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 .user-horoscope-reading {
     text-align: center;
-    padding: 3% 2% 2% 2%;
+    padding: 2% 2% 2% 2%;
     border-radius: 0.3rem;
     background-color: rgba(100, 149, 237, 0.2);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; 
@@ -234,6 +225,11 @@ div.astro-buttons button span {
 
 .reading {
     font-size: 1.4rem;
+}
+
+.error-message {
+    font-size: 1.1rem;
+    color: rgb(221, 84, 84);
 }
 
 .user-horoscope-reading span {
@@ -245,11 +241,15 @@ div.astro-buttons button span {
     font-family: 'Major Mono Display', monospace;
     font-size: 1.8rem;
     text-align: center;
-    margin: 3%;
+    margin-bottom: 2%;
+}
+
+div.date-buttons {
+    width: 100%;
 }
 
 div.date-buttons button {
-    padding: 1.7%;
+    padding: 0.9% 1.5%;
     border: none;
     border-radius: 0.3rem;
     color: rgb(255, 248, 220);
@@ -263,21 +263,29 @@ div.date-buttons button:focus {
 }
 
 .yesterday {
-    margin-right: 5%;
+    margin-right: 3%;
 }
 
 .tomorrow {
-    margin-left: 5%;
+    margin-left: 3%;
 }
 
-div.horoscope-reading-content {
-    position: relative;
+a.arrow-up {
+    font-size: 2rem;
+    display: inline-block;
+    margin-top: 2%;
 }
 
 /* Footer */
 
+a.arrow-up:hover,
+a.arrow-up:focus {
+    color: rgb(255, 248, 220);
+}
+
 footer {
     text-align: center;
+    height: 10vh;
 }
 
 footer p {
@@ -317,7 +325,13 @@ footer a:focus {
     }
 
     .sign-selection h2 {
-        margin-top: 3%;
+        margin-top: 20%;
+    }
+}
+
+@media(max-width: 815px) {
+    a.arrow-up {
+        margin-top: 5%;
     }
 }
 
@@ -326,18 +340,43 @@ footer a:focus {
     .sign-selection h2 {
         margin-top: 25%;
     }
+
+    .horoscope-reading h2 {
+        margin-top: 20%;
+    }
+
+    a.arrow-up {
+        margin-top: 25%;
+    }
+
+    footer {
+        margin-top: 5%;
+    }
     
 }
 
 @media(max-width: 563px) {
 
     .sign-selection h2 {
-        margin-top: 90%;
+        margin-top: 100%;
     }
 
     h1 {
         font-size: 2rem;
     }
+
+    .horoscope-reading h2 {
+        margin-top: 100%;
+    }
+
+    a.arrow-up {
+        margin-top: 110%;
+    }
+
+    footer {
+        margin-top: 5%;
+    }
+    
 }
 
 @media(max-width: 510px) {
@@ -353,6 +392,16 @@ footer a:focus {
         font-size: 1rem;
         padding-top: 1.7rem;
     }
+
+    h3,
+    .reading {
+        font-size: 1.1rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
 }
 
 @media(max-width: 394px) {
@@ -361,7 +410,19 @@ footer a:focus {
     }
 
     .sign-selection h2 {
-        margin-top: 95%;
+        margin-top: 100%;
+    }
+
+    .horoscope-reading h2 {
+        margin-top: 120%;
+    }
+
+    a.arrow-up {
+        margin-top: 125%;
+    }
+
+    footer {
+        margin-top: 10%;
     }
 }
 

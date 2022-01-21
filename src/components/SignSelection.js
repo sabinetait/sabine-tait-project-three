@@ -40,6 +40,7 @@ const SignSelection = () => {
     // event listener for click on user's choice of date
     const handleDateChange = (event) => {
       setDate(event.target.id);
+
     }
 
     // API call to fetch data based on user's astrological choice
@@ -86,7 +87,7 @@ const SignSelection = () => {
     return (
       <main>
 
-        <section className="sign-selection">
+        <section className="sign-selection"> {/* displaying the astrological sign button for user */}
           
           <div>
 
@@ -114,21 +115,20 @@ const SignSelection = () => {
         </section>
           
 
-        <section className="horoscope-reading" ref={readingRef}>
+        <section className="horoscope-reading"> {/* displaying horoscope for user based off sign choice */}
 
           <div className="horoscope-reading-content">
 
-            <h2><span className="lower">Y</span>ou<span className="upper">r</span> Re<span className="upper">a</span>ding</h2>
+            <h2 ref={readingRef}><span className="lower">Y</span>ou<span className="upper">r</span> Re<span className="upper">a</span>ding</h2>
 
-            <h3 className="error-message">{ error && <div>{ error }</div>}</h3>
-
-            <div className="date-buttons">
+            <div className="date-buttons"> {/* displaying date buttons for user */}
               <button id="yesterday" className="yesterday" onClick={ handleDateChange }>Yesterday</button>
               <button id="today" className="today" onClick={ handleDateChange }>Today</button>
               <button id="tomorrow" className="tomorrow" onClick={ handleDateChange }>Tomorrow</button>
             </div>
 
-            
+            <h3 className="error-message">{ error && <div>{ error }</div>}</h3>  {/* display error message from API */}
+           
             <Results
               current_date={horoscope.current_date}
               description={horoscope.description}

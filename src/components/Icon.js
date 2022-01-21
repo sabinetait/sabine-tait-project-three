@@ -8,7 +8,7 @@ const Icon = () => {
 
     return (
         <div>
-            <a href="#header" sr-only="Top of page" className="arrow-up"><FontAwesomeIcon icon={faArrowCircleUp} /></a> 
+            <a href="#header" sr-only="Arrow to top of page" className="arrow-up"><FontAwesomeIcon icon={faArrowCircleUp} /></a> 
         </div>
     )
 

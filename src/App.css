@@ -5,3 +5,424 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 *, *:before, *:after {box-sizing: inherit}
 
 .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
+
+/* Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Poiret+One&display=swap');
+
+/* General styles */
+
+html {
+    font-size: 125%;
+    padding: 0;
+    margin: 0;
+    background-color: rgb(9, 5, 39);
+    background-image: url(../assests/background-image.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    scroll-behavior: smooth;
+}
+
+.App {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   padding-top: 2%;
+   
+}
+
+.wrapper {
+    width: 85%;
+    max-width: 1440px;
+}
+
+/* Header */
+
+header {
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+}
+
+/* Typography */
+
+h1 {
+    margin: 0;
+    font-size: 3.5rem;
+    font-family: 'Major Mono Display', monospace;
+}
+
+span.upper {
+    text-transform: uppercase;
+}
+
+span.lower {
+    text-transform: lowercase;
+}
+
+.sign-selection h2 {
+    margin-bottom: 3%;
+    font-size: 1.3rem;
+    font-family: 'Poiret One', cursive;
+}
+
+h3 {
+    font-family: 'Poiret One', cursive;
+    font-size: 1.4rem;
+    color: rgb(255, 248, 220);
+    margin-top: 0;
+}
+
+p {
+    font-family: 'Poiret One', cursive;
+    font-size: 1.2rem;
+}
+
+a {
+    font-family: 'Poiret One', cursive;
+    color: white;
+}
+
+button {
+    text-transform: uppercase;
+    font-family: 'Poiret One', cursive;
+}
+
+/* Signs */
+
+.sign-selection {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.astro-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 5%;
+    border-radius: 0.3rem;
+    padding: 3% 0;
+    background-color: rgba(100, 149, 237, 0.2);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    
+}
+
+div.astro-buttons button {
+    height: 8.5rem;
+    width: 8.5rem;
+    margin: 1%;
+    border: none;
+    font-size: 1.2rem;
+    border-radius: 0.3rem;
+    display: flex;
+    flex-direction: column;
+    padding-top: 2.7rem;
+    color: rgb(255, 248, 220);
+    background-color: rgba(144, 181, 248, 0.295);
+    box-shadow: rgba(129, 129, 153, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+
+.aries {
+    background-image: url(../assests/aries.png);
+    background-size: 85%;
+}
+
+.taurus {
+    background-image: url(../assests/taurus.png);
+    background-size: 80%;
+}
+
+.gemini {
+    background-image: url(../assests/gemini.png);
+    background-size: 100%;
+}
+
+.cancer {
+    background-image: url(../assests/cancer.png);
+    background-size: 100%;
+}
+
+.leo {
+    background-image: url(../assests/leo.png);
+    background-size: 70%;
+}
+
+.virgo {
+    background-image: url(../assests/virgo.png);
+    background-size: 100%;
+}
+
+.libra {
+    background-image: url(../assests/libra.png);
+    background-size: 100%;
+}
+
+.scorpio {
+    background-image: url(../assests/scorpio.png);
+    background-size: 75%;
+}
+
+.sagittarius {
+    background-image: url(../assests/sagittarius.png);
+    background-size: 80%;
+}
+
+.capricorn {
+    background-image: url(../assests/capricorn.png);
+    background-size: 100%;
+}
+ 
+.aquarius {
+    background-image: url(../assests/aquarius.png);
+    background-size: 100%;
+}
+
+.pisces{
+    background-image: url(../assests/pisces.png);
+    background-size: 80%;
+}
+
+div.astro-buttons button:hover,
+div.astro-buttons button:focus {
+    background-color: rgba(67, 90, 133, 0.295);
+}
+
+
+div.astro-buttons button span {
+    font-size: 1rem;
+    padding-top: 0.3rem;
+}
+
+/* Horoscope */
+
+.horoscope-reading {
+    height: 90vh;
+    margin-top: 7%;
+}
+
+.horoscope-reading-content {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user-horoscope-reading {
+    text-align: center;
+    padding: 2% 2% 2% 2%;
+    border-radius: 0.3rem;
+    background-color: rgba(100, 149, 237, 0.2);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; 
+}
+
+.reading {
+    font-size: 1.4rem;
+}
+
+.error-message {
+    font-size: 1.1rem;
+    color: rgb(221, 84, 84);
+}
+
+.user-horoscope-reading span {
+    text-transform: uppercase;
+    color: rgb(255, 248, 220);
+}
+
+.horoscope-reading h2 {
+    font-family: 'Major Mono Display', monospace;
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 2%;
+}
+
+div.date-buttons {
+    width: 100%;
+}
+
+div.date-buttons button {
+    padding: 0.9% 1.5%;
+    border: none;
+    border-radius: 0.3rem;
+    color: rgb(255, 248, 220);
+    background-color: rgba(144, 181, 248, 0.295);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+div.date-buttons button:hover,
+div.date-buttons button:focus {
+    background-color: rgba(67, 90, 133, 0.295);
+}
+
+.yesterday {
+    margin-right: 3%;
+}
+
+.tomorrow {
+    margin-left: 3%;
+}
+
+a.arrow-up {
+    font-size: 2rem;
+    display: inline-block;
+    margin-top: 2%;
+}
+
+/* Footer */
+
+a.arrow-up:hover,
+a.arrow-up:focus {
+    color: rgb(255, 248, 220);
+}
+
+footer {
+    text-align: center;
+    height: 10vh;
+}
+
+footer p {
+    font-size: 16px;
+    padding: 1% 0;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
+footer a:hover,
+footer a:focus {
+    color: rgb(255, 248, 220);
+}
+
+/* Media queries */
+
+@media(max-width: 1365px) {
+
+    h1 {
+        font-size: 2.8rem;
+    }
+
+    .sign-selection h2 {
+        margin-top: 10%;
+    }
+}
+
+@media(max-width: 900px) {
+
+    div.astro-buttons button {
+        height: 7.5rem;
+        width: 7.5rem;
+        padding-top: 2rem;
+    }
+
+    .sign-selection h2 {
+        margin-top: 20%;
+    }
+}
+
+@media(max-width: 815px) {
+    a.arrow-up {
+        margin-top: 5%;
+    }
+}
+
+@media(max-width: 770px) {
+
+    .sign-selection h2 {
+        margin-top: 25%;
+    }
+
+    .horoscope-reading h2 {
+        margin-top: 20%;
+    }
+
+    a.arrow-up {
+        margin-top: 25%;
+    }
+
+    footer {
+        margin-top: 5%;
+    }
+    
+}
+
+@media(max-width: 563px) {
+
+    .sign-selection h2 {
+        margin-top: 100%;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .horoscope-reading h2 {
+        margin-top: 100%;
+    }
+
+    a.arrow-up {
+        margin-top: 110%;
+    }
+
+    footer {
+        margin-top: 5%;
+    }
+    
+}
+
+@media(max-width: 510px) {
+    .sign-selection h2 {
+        margin-top: 85%;
+        margin-bottom: 5%;
+        font-size: 1.1rem;
+    }
+
+    div.astro-buttons button {
+        height: 7rem;
+        width: 7rem;
+        font-size: 1rem;
+        padding-top: 1.7rem;
+    }
+
+    h3,
+    .reading {
+        font-size: 1.1rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+}
+
+@media(max-width: 394px) {
+    h1 {
+        font-size: 1.85rem;
+    }
+
+    .sign-selection h2 {
+        margin-top: 100%;
+    }
+
+    .horoscope-reading h2 {
+        margin-top: 120%;
+    }
+
+    a.arrow-up {
+        margin-top: 125%;
+    }
+
+    footer {
+        margin-top: 10%;
+    }
+}
+

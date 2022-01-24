@@ -1,56 +1,56 @@
+// Stars Align App
+
+// *** Sign Selection Component ***
+// Create state items to hold data coming from the aztroAPI -> the user astrological selection (stretch: add user birthday input to select astrological sign, add user date selection)
+// - horoscope
+// - userSign
+// The local method (signSelection) to get a data from the user's sign
+
+// signSelection method will make the call to aztroAPI with or without user input
+// - when successful, update the state (horoscope) with new data
+// - if unsuccessful, display the error message
+
+// A local method (handleClick) to handle the onClick event to update state (userSign) with user input
+
+// *** Result Component ***
+// Create a component to display data from the aztroAPI
+// This component will get data (horoscope) passed in as props
+// Render out horoscope and other data for each astrological sign
+
+// Render the application
+// - header
+// - buttons for user input/click to on astrologocal sign
+// - use the imported Result component
+// - arrow up icon to return to top of page
+// - footer
+
+
+// Styling
 import './App.css';
 
-function App() {
+// Components
+import Header from './components/Header.js';
+import SignSelection from './components/SignSelection.js';
+import Footer from './components/Footer.js';
+import Icon from './components/Icon.js';
+
+const App = () => {
+
   return (
     <div className="App">
-      <header>
-        <h1>Stars Align</h1>
-      </header>
 
-      <main>
-        <div>
-          <h2>Select your astrological sign for your daily horoscope</h2>
+      <div className="wrapper">
 
-          <section className="astro-buttons">
-            <button>Aries</button>
-            <button>Taurus</button>
-            <button>Gemini</button>
-            <button>Cancer</button>
-            <button>Leo</button>
-            <button>Virgo</button>
-            <button>Libra</button>
-            <button>Scorpio</button>
-            <button>Sagittarius</button>
-            <button>Capricorn</button>
-            <button>Aquarius</button>
-            <button>Pisces</button>
-          </section>
+        <Header />
 
-          <section className="user-horoscopeReading">
-            <h2>Date:</h2>
+        <SignSelection />
 
-            <div className="text-content">
+        <Icon />
 
-              <div class="daily-reading">
-                <p></p>
-              </div>
+        <Footer />
 
-              <div class="sign-characteristics">
-                <p>Colour:</p>
-                <p>Compatibility:</p>
-                <p>Lucky number:</p>
-                <p>Mood:</p>
-                <p>Time to thrive:</p>
-              </div>
-              
-            </div>
-          </section>
-      
-        </div>
-      </main>
-      <footer>
-        <p>Create at Juno College 2022</p>
-      </footer>
+      </div>
+
     </div>
   );
 }
